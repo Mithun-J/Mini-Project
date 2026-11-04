@@ -1,0 +1,42 @@
+EXPLORATORY DATA ANALYSIS (EDA) - STATISTICAL REPORT
+Batch 7 Mini Project — DSA B13 Offline
+=================================================================
+
+1. DATA STRUCTURE OVERVIEW (Member 2: Azifali A)
+   Total Records       : 19,577
+   Total Features      : 15
+   Missing Values      : 0
+   Duplicate Rows      : 0
+
+2. OUTLIER SUMMARY (Member 1: Mithun J - Project Lead)
+   * area                    : Bounds [-110392.00, 187824.00] | Outliers:  3061 (15.64%) | Extreme:  2275 (11.62%)
+   * production              : Bounds [-183070.00, 308978.00] | Outliers:  3355 (17.14%) | Extreme:  2748 (14.04%)
+   * annual_rainfall         : Bounds [  -113.80,   2698.20] | Outliers:  1514 ( 7.73%) | Extreme:   476 ( 2.43%)
+   * fertilizer              : Bounds [-14717232.20, 25044889.40] | Outliers:  3071 (15.69%) | Extreme:  2248 (11.48%)
+   * pesticide               : Bounds [-29400.21,  49986.03] | Outliers:  3020 (15.43%) | Extreme:  2277 (11.63%)
+   * yield                   : Bounds [    -2.10,      5.12] | Outliers:  3050 (15.58%) | Extreme:  2315 (11.83%)
+   * fertilizer_per_hectare  : Bounds [    33.99,    232.26] | Outliers:     0 ( 0.00%) | Extreme:     0 ( 0.00%)
+   * pesticide_per_hectare   : Bounds [     0.05,      0.50] | Outliers:     0 ( 0.00%) | Extreme:     0 ( 0.00%)
+   * log_yield               : Bounds [    -0.66,      2.36] | Outliers:  1963 (10.03%) | Extreme:   763 ( 3.90%)
+
+3. COCONUT YIELD ANOMALY & REMEDIATION (Member 1: Mithun J)
+   * Raw Dataset Yield Skewness        : 12.79
+   * Capped Yield Skewness             : 12.43
+   * Log-Transformed Skewness (Full)   : 3.66
+   * Log-Transformed Skewness (Non-Coc): 1.95
+   * Finding: Coconut's reporting unit (nuts/ha vs tonnes/ha) is the root cause.
+   * Resolution: 95th-pct capping + log1p normalization restored normal distribution.
+
+4. FEATURE CORRELATIONS WITH LOG_YIELD (Member 3: Jayakrishnan KV)
+   * production               : +0.420
+   * annual_rainfall          : +0.042
+   * fertilizer_per_hectare   : +0.035
+   * pesticide_per_hectare    : +0.028
+   * area                     : +0.020
+
+5. GENERATED MAJOR EDA PLOTS (Member 4: Sharon)
+   * reports/figures/01_yield_distribution_and_outliers.png
+   * reports/figures/02_top_crop_yields.png
+   * reports/figures/03_seasonal_yield_variation.png
+   * reports/figures/04_state_production_ranking.png
+   * reports/figures/05_correlation_heatmap.png
