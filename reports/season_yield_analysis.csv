@@ -1,0 +1,7 @@
+season,record_count,mean_yield,mean_rainfall,mean_fertilizer_per_ha,mean_pesticide_per_ha
+Whole Year,3666,414.17,1634.87,131.63,0.26
+Winter,389,5.29,1724.91,139.98,0.27
+Autumn,414,3.92,1698.49,140.86,0.28
+Summer,1193,3.0,1310.29,142.92,0.28
+Kharif,8183,2.5,1376.96,136.96,0.28
+Rabi,5732,1.99,1389.05,139.19,0.28
