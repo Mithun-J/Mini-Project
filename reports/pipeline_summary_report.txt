@@ -1,0 +1,71 @@
+CROP YIELD ETL PIPELINE — AUDIT & SUMMARY REPORT
+Batch 7 Mini Project — DSA B13 Offline
+============================================================
+
+1. EXECUTION OVERVIEW
+   Raw Records Ingested   : 19,689
+   Clean Records Saved    : 19,577
+   Records Filtered Out   : 112 (0.57%)
+   Data Retention Rate    : 99.43%
+
+2. FINAL SCHEMA CONTRACT
+   Total Columns: 15
+   - crop                       : object
+   - crop_year                  : int64
+   - season                     : object
+   - state                      : object
+   - area                       : float64
+   - production                 : int64
+   - annual_rainfall            : float64
+   - fertilizer                 : float64
+   - pesticide                  : float64
+   - yield                      : float64
+   - fertilizer_per_hectare     : float64
+   - pesticide_per_hectare      : float64
+   - rainfall_category          : category
+   - yield_category             : object
+   - log_yield                  : float64
+
+3. DATA INTEGRITY & AUDIT
+   Missing Values in Output : 0
+   Duplicate Rows in Output : 0
+   Survey Year Coverage     : 1997 to 2020
+   Number of States         : 30
+   Number of Crops          : 55
+
+4. YIELD METRICS (DISTRIBUTION SUMMARY)
+   Min Yield                : 0.00
+   Q1 (25th percentile)     : 0.60
+   Median (50th percentile) : 1.04
+   Mean Yield               : 79.56
+   Q3 (75th percentile)     : 2.41
+   Max Yield (Capped)       : 13809.77
+   Standard Deviation       : 865.18
+   Log Yield Skewness       : 3.66
+
+5. TOP 5 CROPS BY MEAN YIELD
+   Coconut                :    8917.54
+   Sugarcane              :      51.73
+   Banana                 :      27.07
+   Tapioca                :      16.75
+   Onion                  :      13.45
+
+6. TOP 5 AGRICULTURAL STATES BY TOTAL PRODUCTION
+   Kerala                 : 129,700,649,853.00
+   Tamil Nadu             : 78,051,758,815.00
+   Karnataka              : 63,772,797,366.00
+   Andhra Pradesh         : 26,076,218,605.00
+   West Bengal            : 8,941,179,112.00
+
+7. RAINFALL CATEGORY COUNTS
+   Medium                 : 7,643
+   Low                    : 4,847
+   High                   : 4,313
+   Very High              : 1,904
+   Very Low               : 870
+
+8. GENERATED SUMMARY REPORTS
+   - reports/crop_yield_summary.csv       (Crop-wise metrics)
+   - reports/state_production_summary.csv (State-wise totals)
+   - reports/season_yield_analysis.csv    (Season-wise breakdown)
+   - reports/pipeline_summary_report.txt  (This summary text)
